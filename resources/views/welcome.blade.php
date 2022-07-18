@@ -48,12 +48,12 @@
                     </td>
 
                     <td>
-                                <span class="badge bg-{{ $post->status === 1 ? 'success' : 'danger' }}">
+                                <span style=" padding: 10px 20px 10px 20px; border-radius: 30px; " ; class="badge bg-{{ $post->status === 1 ? 'success' : 'danger' }}">
                                     {{$post->status === 1 ? 'active' : 'inactive'}}
                                 </span>
                     </td>
                     <td>
-                        <a href="{{route('post.show', $post)}}" class="btn btn-secondary">Show</a>
+                        <a href="{{route('post.show', $post)}}" class="btn btn-warning">Show</a>
                         <a href="{{route('post.edit', $post)}}" class="btn btn-primary">Edit</a>
                         <form class="d-inline" action="{{route('post.destroy', $post)}}" method="post">
                             @csrf
