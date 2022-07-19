@@ -11,8 +11,9 @@
 <body>
 <div class="container">
 
-
     <div class="row mt-5 ">
+    <div style="text-align: center;font-size: 40px;font-weight: bold;"> <p>Add information</p>  </div>
+
         <div class="col-lg-7 mx-auto">
             <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
@@ -27,18 +28,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="form_name">title *</label>
+                                            <label for="form_name">Title *</label>
                                             <input id="form_name" type="text" name="title" class="form-control"
-                                                   placeholder="Please enter your title *"
+
                                                    data-error="title is required.">
 
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="form_lastname">subtitle *</label>
+                                            <label for="form_lastname">Subtitle *</label>
                                             <input id="form_lastname" type="text" name="sub_title" class="form-control"
-                                                   placeholder="Please enter your sub_title *"
                                                    data-error="sub_title is required.">
                                         </div>
                                     </div>
@@ -50,7 +50,6 @@
                                         <div class="form-group">
                                             <label for="form_message">Image *</label>
                                             <input id="form_message" type="file" name="image" class="form-control"
-                                                   placeholder="Please enter your image *"
                                                    data-error="Image is required.">
                                         </div>
 
@@ -62,7 +61,7 @@
                                             <div class="form-group">
                                                 <label for="form_message">Description *</label>
                                                 <textarea id="form_message" name="description" class="form-control"
-                                                          placeholder="Write  description here." rows="4"
+                                                       rows="4"
                                                           data-error="Please, leave us a description."></textarea
                                                 >
                                             </div>
