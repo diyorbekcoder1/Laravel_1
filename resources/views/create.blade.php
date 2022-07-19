@@ -29,17 +29,30 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_name">Title *</label>
-                                            <input id="form_name" type="text" name="title" class="form-control"
+                                            <input id="form_name" type="text" name="title"
+                                                   class="form-control  @error('title') is-invalid @enderror"
+                                                   placeholder="Please enter your title *"
+                                                   data-error="title is required."
+                                                   value="{{old('title')}}">
 
-                                                   data-error="title is required.">
+                                            @error('title')
+                                            <span style="color: red">{{$message}} </span>
+                                            @enderror
 
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_lastname">Subtitle *</label>
-                                            <input id="form_lastname" type="text" name="sub_title" class="form-control"
-                                                   data-error="sub_title is required.">
+                                            <input id="form_lastname" type="text" name="sub_title"
+                                                   class="form-control @error('sub_title') is-invalid @enderror"
+                                                   placeholder="Please enter your sub_title *"
+                                                   data-error="sub_title is required."
+                                                   value="{{old('sub_title')}}">
+
+                                            @error('sub_title')
+                                            <span style="color: red">{{$message}} </span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -49,8 +62,13 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="form_message">Image *</label>
-                                            <input id="form_message" type="file" name="image" class="form-control"
+                                            <input id="form_message" type="file" name="image"
+                                                   class="form-control @error('image') is-invalid @enderror"
+                                                   placeholder="Please enter your image *"
                                                    data-error="Image is required.">
+                                            @error('image')
+                                            <span style="color: red">{{$message}} </span>
+                                            @enderror
                                         </div>
 
                                     </div>
@@ -60,10 +78,16 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="form_message">Description *</label>
-                                                <textarea id="form_message" name="description" class="form-control"
-                                                       rows="4"
-                                                          data-error="Please, leave us a description."></textarea
+                                                <textarea id="form_message" name="description"
+                                                          class="form-control @error('description') is-invalid @enderror"
+                                                          placeholder="Write  description here." rows="4"
+                                                          data-error="Please, leave us a description.">
+                                                    {{old('description')}}
+                                                </textarea
                                                 >
+                                                @error('description')
+                                                <span style="color: red">{{$message}} </span>
+                                                @enderror
                                             </div>
 
                                         </div>
@@ -71,7 +95,8 @@
 
                                         <div class="col-md-12 m-1">
 
-                                            <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Create">
+                                            <input type="submit" class="btn btn-success btn-send  pt-2 btn-block"
+                                                   value="Create">
 
                                         </div>
 
